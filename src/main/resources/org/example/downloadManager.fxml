@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+  <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -22,7 +22,7 @@
                         <Font size="25.0" />
                      </font>
                   </Text>
-                  <TextField promptText="Enter URL hear">
+                  <TextField fx:id="urlTextFiled" promptText="Enter URL hear">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
