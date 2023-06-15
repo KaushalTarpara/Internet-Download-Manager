@@ -54,7 +54,8 @@
                         <TableColumn prefWidth="75.0" text="File Name" />
                         <TableColumn prefWidth="75.0" text="URL" />
                         <TableColumn prefWidth="75.0" text="Status" />
-                        <TableColumn prefWidth="75.0" text="Actions" />
+                        <TableColumn prefWidth="75.0" text="\% Completed" />
+                  <TableColumn prefWidth="75.0" text="Actions" />
                     </columns>
                     <BorderPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
