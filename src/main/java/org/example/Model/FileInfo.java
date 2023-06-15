@@ -5,32 +5,31 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class FileInfo {
 
-    private SimpleIntegerProperty index;
-    private SimpleStringProperty name;
-    private SimpleStringProperty url;
+    private  SimpleStringProperty index = new  SimpleStringProperty();
+    private SimpleStringProperty name = new SimpleStringProperty();
+    private SimpleStringProperty url = new SimpleStringProperty();
+    private SimpleStringProperty status = new SimpleStringProperty();   // DOWNLOADING  ,  DONE  ,  STARTING
+    private SimpleStringProperty action= new SimpleStringProperty();
+    private SimpleStringProperty path= new SimpleStringProperty();
 
-    // DOWNLOADING  ,  DONE  ,  STARTING
-    private SimpleStringProperty status;
-
-    private SimpleStringProperty action;
-
-    public FileInfo(int index, String name, String url, String status, String action) {
+    public FileInfo(String index, String name, String url, String status, String action, String path) {
         this.index.set(index);
         this.name.set(name);
         this.url.set(url);
         this.status.set(status);
         this.action.set(action);
+        this.path.set(path);
     }
 
-    public int getIndex() {
+    public String getIndex() {
         return index.get();
     }
 
-    public SimpleIntegerProperty indexProperty() {
+    public SimpleStringProperty indexProperty() {
         return index;
     }
 
-    public void setIndex(int index) {
+    public void setIndex(String index) {
         this.index.set(index);
     }
 
@@ -82,5 +81,27 @@ public class FileInfo {
         this.action.set(action);
     }
 
+    public String getPath() {
+        return path.get();
+    }
 
+    public SimpleStringProperty pathProperty() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path.set(path);
+    }
+
+    @Override
+    public String toString() {
+        return "FileInfo{" +
+                "index=" + index +
+                ", name=" + name +
+                ", url=" + url +
+                ", status=" + status +
+                ", action=" + action +
+                ", path=" + path +
+                '}';
+    }
 }
